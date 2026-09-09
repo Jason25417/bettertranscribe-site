@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BetterTranscribe — Privacy Policy</title>
+<title>Scritto 言录 — Privacy Policy / 隐私政策</title>
 <style>
   :root { color-scheme: light dark; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
@@ -19,25 +19,27 @@
 </style>
 </head>
 <body>
-<h1>Privacy Policy / 隐私政策</h1>
-<p class="sub"><strong>Effective date / 生效日期:</strong> 2026-07-10</p>
+<h1>Scritto 言录 — Privacy Policy / 隐私政策</h1>
+<p class="sub"><strong>Effective date / 生效日期:</strong> 2026-09-09</p>
+<p class="sub">Scritto 言录（曾用名 BetterTranscribe；bundle <code>com.jason.BetterTranscribe</code>）</p>
 
 <h2>English</h2>
 
 <h3>Overview</h3>
-<p>BetterTranscribe is a local-first recording, transcription, and translation app for Mac and iPhone. It is designed so that everything works entirely on your device by default. <strong>We do not collect, store, or sell any of your data. The app contains no analytics, no advertising, and no trackers.</strong></p>
+<p>Scritto (言录) is a local-first recording, transcription, and translation app for Mac, iPhone and iPad. It is designed so that everything works entirely on your device by default. <strong>We do not collect, store, or sell any of your data. The app contains no analytics, no advertising, and no trackers.</strong></p>
 
 <h3>What stays on your device</h3>
-<p>By default, all of the following happens on-device using Apple frameworks, and never leaves your device: audio recording (microphone and system audio), transcription (Apple SpeechAnalyzer), translation (Apple Translation), speaker identification (on-device models), and text polishing (Apple on-device intelligence models). Your recordings and transcripts are stored locally on your device.</p>
+<p>By default, all of the following happens on-device using Apple frameworks, and never leaves your device: audio recording (microphone and system audio), transcription (Apple SpeechAnalyzer), translation (Apple Translation), speaker identification (on-device models), and text polishing (Apple on-device intelligence models). Transcripts and metadata are stored on your device and synced through your own iCloud. <strong>Audio files are moved into your own iCloud Drive when a recording finishes</strong> (see below); if you are not signed in to iCloud, or iCloud Drive is off, everything stays local.</p>
 
 <h3>iCloud sync</h3>
-<p>If you are signed in to iCloud, your session library syncs through <strong>your personal, private iCloud database (CloudKit)</strong>. This data is protected by your Apple Account and is not accessible to the developer or anyone else.</p>
+<p>If you are signed in to iCloud, your session library (text and metadata) syncs through <strong>your personal, private iCloud database (CloudKit)</strong>. This data is protected by your Apple Account and is not accessible to the developer or anyone else.</p>
+<p><strong>Audio files are different:</strong> they are stored in this app's folder in <strong>your iCloud Drive</strong> (Documents/Recordings). That folder is visible to you in the Files app and in Finder, you can delete files there yourself, and the audio counts against your iCloud storage. This is still your own iCloud — the developer has no access to it.</p>
 
 <h3>Optional cloud engines (off by default)</h3>
 <p>You may optionally configure third-party cloud engines using <strong>your own API keys</strong> (for example: Deepgram for transcription, pyannoteAI for speaker identification, or LLM providers for translation). These are off by default and only used when you explicitly enable them.</p>
 <ul>
-<li>When you enable a cloud engine, the relevant audio or text is sent directly from your device to that provider to perform the task you requested, under that provider's own privacy policy.</li>
-<li>Your API keys are stored only in the system Keychain on your device.</li>
+<li>When you enable a cloud engine, the relevant audio or text is sent directly from your device to that provider to perform the task you requested, under that provider's own privacy policy. Depending on which engines you configure this can include: <strong>whole recordings</strong> (cloud transcription; speaker identification via pyannoteAI, including when a voiceprint is created or rebuilt; multimodal transcript polishing), and <strong>transcript text</strong> (cloud translation, text polishing, name inference — which also sends the names already in your people library as a candidate list). Every such action states what leaves the device at the point where you trigger it.</li>
+<li>Your API keys are stored in the system Keychain. <strong>Keychain items sync through iCloud Keychain</strong>, so a key you enter on one device becomes available on your other devices.</li>
 <li>The developer never receives, proxies, or has access to this data.</li>
 </ul>
 
@@ -45,7 +47,8 @@
 <p>If you grant calendar access, the app reads event names for the time of your recording, only to suggest a session name. This information stays on your device.</p>
 
 <h3>Data retention and deletion</h3>
-<p>All data is under your control. You can delete any session, transcript, or voiceprint inside the app at any time. Deleting the app removes all local data; iCloud data can be managed in your device's iCloud settings.</p>
+<p>All data is under your control. Deleting a session inside the app removes its database record, its audio (local <em>and</em> the copy in iCloud Drive), its derived audio, its recovery snapshots and its system-search entry. Deleting a person removes their voiceprints and the enrolment audio. Derived caches on your <em>other</em> devices are cleaned up the next time the app starts there.</p>
+<p>Deleting the app removes local data; audio already in <strong>iCloud Drive</strong> can also be deleted directly in the Files app or in your iCloud settings. <strong>What we cannot delete for you:</strong> anything a third-party cloud engine kept on its own servers — that is governed by that provider's policy (pyannoteAI, for example, states it deletes uploaded audio after 48 hours).</p>
 
 <h3>Children</h3>
 <p>The app does not collect data from anyone, including children.</p>
@@ -61,19 +64,20 @@
 <h2>中文</h2>
 
 <h3>概述</h3>
-<p>BetterTranscribe 是一款本地优先的录音、转录与翻译 App（Mac / iPhone）。默认状态下一切功能完全在你的设备上完成。<strong>开发者不收集、不存储、不出售你的任何数据。App 不含统计分析、广告和任何追踪器。</strong></p>
+<p>Scritto 言录是一款本地优先的录音、转录与翻译 App（Mac / iPhone / iPad）。默认状态下一切功能完全在你的设备上完成。<strong>开发者不收集、不存储、不出售你的任何数据。App 不含统计分析、广告和任何追踪器。</strong></p>
 
 <h3>留在设备上的内容</h3>
-<p>默认情况下，以下处理全部通过 Apple 框架在设备端完成，数据不离开设备：录音（麦克风与系统音频）、转录（Apple SpeechAnalyzer）、翻译（Apple Translation）、说话人识别（端上模型）、文本整理（Apple 端上智能模型）。录音与文稿存储在你的设备本地。</p>
+<p>默认情况下，以下处理全部通过 Apple 框架在设备端完成，数据不离开设备：录音（麦克风与系统音频）、转录（Apple SpeechAnalyzer）、翻译（Apple Translation）、说话人识别（端上模型）、文本整理（Apple 端上智能模型）。文稿与元数据存在设备本地并经你自己的 iCloud 同步；<strong>录音文件在录制完成后会移入你自己的 iCloud Drive</strong>（见下）。未登录 iCloud 或关闭 iCloud Drive 时，全部留在本地。</p>
 
 <h3>iCloud 同步</h3>
-<p>若你登录了 iCloud，会话库通过<strong>你个人的私有 iCloud 数据库（CloudKit）</strong>同步。这些数据受你的 Apple 账户保护，开发者与任何第三方均无法访问。</p>
+<p>若你登录了 iCloud，会话库（文字与元数据）通过<strong>你个人的私有 iCloud 数据库（CloudKit）</strong>同步。这些数据受你的 Apple 账户保护，开发者与任何第三方均无法访问。</p>
+<p><strong>录音音频不一样</strong>：它存放在<strong>你的 iCloud Drive</strong> 里本 App 的文件夹（Documents/Recordings）。这个文件夹你在「文件」App 和 Finder 里看得见、可以自己删，音频也会占用你的 iCloud 存储空间。它仍然是你自己的 iCloud，开发者无法访问。</p>
 
 <h3>可选云端引擎（默认关闭）</h3>
 <p>你可以选择用<strong>自己的 API key</strong> 配置第三方云端引擎（如 Deepgram 转录、pyannoteAI 声纹识别、LLM 服务商翻译）。它们默认关闭，仅在你显式启用后使用。</p>
 <ul>
-<li>启用后，相关音频或文本会从你的设备直接发送给该服务商以完成你请求的任务，适用其自身隐私政策。</li>
-<li>API key 仅保存在你设备的系统钥匙串中。</li>
+<li>启用后，相关音频或文本会从你的设备直接发送给该服务商以完成你请求的任务，适用其自身隐私政策。按你配置的引擎不同，可能包括：<strong>整段录音音频</strong>（云端转录；经 pyannoteAI 做认人，<strong>以及每一次生成或重建声纹时</strong>；多模态文稿整理），以及<strong>文稿文本</strong>（云端翻译、文本整理、智能命名——后者还会把你人员库里已有的姓名作为候选名单一并发送）。每一处这样的操作都会在你触发它的地方写明发出去的是什么。</li>
+<li>API key 保存在系统钥匙串中。<strong>钥匙串条目会经 iCloud 钥匙串同步</strong>，因此在一台设备填过的 key 在你的其他设备上也能用。</li>
 <li>开发者不经手、不代理、也无法访问这些数据。</li>
 </ul>
 
@@ -81,7 +85,8 @@
 <p>若你授权日历，App 仅读取录音时段对应的事件名，用于推荐会话名称。该信息不离开设备。</p>
 
 <h3>数据保留与删除</h3>
-<p>所有数据由你掌控。可随时在 App 内删除任何会话、文稿或声纹。删除 App 即清除全部本地数据；iCloud 数据可在系统 iCloud 设置中管理。</p>
+<p>所有数据由你掌控。在 App 内删除一条会话，会一并删除它的数据库记录、音频（本地<em>以及</em> iCloud Drive 里那份）、派生音频、重处理前的恢复副本，以及系统搜索里的条目。删除一个人，会一并删除 TA 的声纹与注册录音原件。你<em>其他设备</em>上的派生缓存会在那台设备下次启动 App 时清理。</p>
+<p>删除 App 会清除设备本地数据；已经在 <strong>iCloud Drive</strong> 里的录音也可以直接在「文件」App 或系统 iCloud 设置里删除。<strong>我们替你删不掉的</strong>：第三方云端引擎留在它自己服务器上的内容——那由该服务商的政策决定（例如 pyannoteAI 声明上传音频 48 小时后删除）。</p>
 
 <h3>儿童</h3>
 <p>本 App 不向任何人（包括儿童）收集数据。</p>
